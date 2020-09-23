@@ -1,10 +1,9 @@
 package edu.lu.uni.serval.fixminer.insertTemplate;
 
-import java.util.List;
-
 import edu.lu.uni.serval.jdt.tree.ITree;
-import edu.lu.uni.serval.templates.FixTemplate;
 import edu.lu.uni.serval.utils.Checker;
+import edu.lu.uni.serval.templates.FixTemplate;
+import java.util.List;
 
 /**
  * @author kui.liu

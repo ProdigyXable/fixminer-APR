@@ -1,16 +1,12 @@
 package edu.lu.uni.serval.utils;
 
-import java.io.File;
-import java.util.List;
-
-import org.eclipse.jdt.core.dom.CompilationUnit;
-
 import edu.lu.uni.serval.AST.ASTGenerator;
 import edu.lu.uni.serval.AST.ASTGenerator.TokenType;
 import edu.lu.uni.serval.jdt.tree.ITree;
 import edu.lu.uni.serval.parser.JavaFileParser;
-import edu.lu.uni.serval.utils.Checker;
-import edu.lu.uni.serval.utils.FileHelper;
+import java.io.File;
+import java.util.List;
+import org.eclipse.jdt.core.dom.CompilationUnit;
 
 /**
  * Parse the suspicious code into an AST.

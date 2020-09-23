@@ -1,11 +1,5 @@
 package edu.lu.uni.serval.bug.fixer;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import edu.lu.uni.serval.config.Configuration;
 import edu.lu.uni.serval.fixminer.ProjectLiteral;
 import edu.lu.uni.serval.fixminer.insertTemplate.InsertIfNonNullCheck;
@@ -42,6 +36,10 @@ import edu.uni.lu.serval.fixminer.fixtemplate.ModifyVarDecStmtMethodVarArgument;
 import edu.uni.lu.serval.fixminer.fixtemplate.ModifyVarDecStmtMethodVarArgument2MethodInvocation;
 import edu.uni.lu.serval.fixminer.fixtemplate.ModifyVarDecStmtMethodVarRef;
 import edu.uni.lu.serval.fixminer.fixtemplate.ModifyVariable;
+import java.util.ArrayList;
+import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Automated Program Repair Tool: FixMiner.
@@ -55,12 +53,12 @@ public class FixMinerFixer extends AbstractFixer {
 	
 	public List<ProjectLiteral> literals;
 	
-	public FixMinerFixer(String path, String projectName, int bugId, String defects4jPath) {
-		super(path, projectName, bugId, defects4jPath);
+	public FixMinerFixer(String path, String projectName, int bugId, String defects4jPath, String pm, String pt, String pf) {
+		super(path, projectName, bugId, defects4jPath, pm, pt, pf);
 	}
 	
-	public FixMinerFixer(String path, String metric, String projectName, int bugId, String defects4jPath) {
-		super(path, metric, projectName, bugId, defects4jPath);
+	public FixMinerFixer(String path, String metric, String projectName, int bugId, String defects4jPath, String pm, String pt, String pf) {
+		super(path, metric, projectName, bugId, defects4jPath, pm, pt, pf);
 	}
 
 	@Override

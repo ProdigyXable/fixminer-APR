@@ -1,13 +1,12 @@
 package edu.uni.lu.serval.fixminer.fixtemplate;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-
 import edu.lu.uni.serval.jdt.tree.ITree;
 import edu.lu.uni.serval.templates.FixTemplate;
 import edu.lu.uni.serval.utils.Checker;
 import edu.lu.uni.serval.utils.ListSorter;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 /**
  * 

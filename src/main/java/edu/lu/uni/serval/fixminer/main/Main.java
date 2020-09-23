@@ -1,17 +1,16 @@
 package edu.lu.uni.serval.fixminer.main;
 
-import java.io.File;
-import java.util.List;
-
 import edu.lu.uni.serval.bug.fixer.FixMinerFixer;
 import edu.lu.uni.serval.config.Configuration;
 import edu.lu.uni.serval.fixminer.LiteralReader;
 import edu.lu.uni.serval.fixminer.ProjectLiteral;
+import java.io.File;
+import java.util.List;
 
 public class Main {
 
 	public static void main(String[] args) {
-		if (args.length != 6) {
+		if (args.length != 9) {
 			System.out.println("Arguments: <Failed_Test_Cases_File_Path> <Suspicious_Code_Positions_File_Path> <Buggy_Project_Path> <defects4j_Path> <Project_Name> <FL_Metric>");
 			System.exit(0);
 		}
@@ -22,10 +21,10 @@ public class Main {
 		String projectName = args[4]; // "Chart_1"
 		Configuration.faultLocalizationMetric = args[5];
 		System.out.println(projectName);
-		fixBug(buggyProjectsPath, defects4jPath, projectName);
+		fixBug(buggyProjectsPath, defects4jPath, projectName, args[6], args[7], args[8]);
 	}
 
-	private static void fixBug(String buggyProjectsPath, String defects4jPath, String buggyProjectName) {
+	private static void fixBug(String buggyProjectsPath, String defects4jPath, String buggyProjectName, String pm, String pt, String pf) {
 		String suspiciousFileStr = Configuration.suspPositionsFilePath;
 		
 		String dataType = "FixMiner";
@@ -41,7 +40,7 @@ public class Main {
 		
 		List<ProjectLiteral> literals = LiteralReader.read(buggyProjectName);
 		
-		FixMinerFixer fixer = new FixMinerFixer(buggyProjectsPath, projectName, bugId, defects4jPath);
+		FixMinerFixer fixer = new FixMinerFixer(buggyProjectsPath, projectName, bugId, defects4jPath, pm, pt, pf);
 		fixer.metric = Configuration.faultLocalizationMetric;
 		fixer.dataType = dataType;
 		fixer.literals = literals; // some local data. FIXME: might be useless.

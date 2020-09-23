@@ -1,5 +1,6 @@
 package edu.lu.uni.serval.utils;
 
+import edu.lu.uni.serval.config.Configuration;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,9 +15,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
-
-import edu.lu.uni.serval.config.Configuration;
-import edu.lu.uni.serval.utils.FileHelper;
 
 public class ShellUtils {
 

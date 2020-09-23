@@ -1,14 +1,13 @@
 package edu.lu.uni.serval.dataprepare;
 
+import edu.lu.uni.serval.utils.FileHelper;
+import edu.lu.uni.serval.utils.JavaLibrary;
+import edu.lu.uni.serval.utils.PathUtils;
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import edu.lu.uni.serval.utils.FileHelper;
-import edu.lu.uni.serval.utils.JavaLibrary;
-import edu.lu.uni.serval.utils.PathUtils;
 
 /**
  * Prepare data for fault localization, program compiling and testing.

@@ -1,13 +1,12 @@
 package edu.lu.uni.serval.fixminer.insertTemplate;
 
+import edu.lu.uni.serval.jdt.tree.ITree;
+import edu.lu.uni.serval.utils.Checker;
+import edu.lu.uni.serval.templates.AlterMethodInvocation;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import edu.lu.uni.serval.jdt.tree.ITree;
-import edu.lu.uni.serval.templates.AlterMethodInvocation;
-import edu.lu.uni.serval.utils.Checker;
 
 /**
  * 
